@@ -101,7 +101,7 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
 <br />
 
   * To create or "bring up" any of the Puppet Agent server(s):
-    * *_Note_: The # sign is replaced with numeric values 1-9*
+    * *_Note_: The \# sign is replaced with numeric values 1-9*
     ```bash
     vagrant up puppetagent#
     ```
@@ -115,14 +115,14 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
 <br />
 
   * To destroy or delete a virtualbox machine using vagrant:
-    * * _Note_: "\<name of server\>" should be replaced by the machine you wish to destroy*
+    * *_Note_: "\<name of server\>" should be replaced by the machine you wish to destroy*
     ```bash
     vagrant destroy -f <name of server>
     ```
 
-   * **_Caution_:Omitting the name of a server will destroy ALL virtual machines associated with this Vagrant file**
+     * **_Caution_:Omitting the name of a server will destroy ALL virtual machines associated with this Vagrant file**
 
-   * Example:
+     * Example:
      ```bash
      vagrant destroy -f puppetmaster
      ```
@@ -140,6 +140,10 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
       vagrant ssh puppetmaster
       ```
 
+<br />
+<br />
+---
+<br />
 <br />
 
 ### Puppet ###
