@@ -43,89 +43,98 @@ This repository contains "most" of the  puppet training content. Some pre-requis
  
 4. Vagrant Box and Plugin:
 
-   Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
-
+   Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: <br />
+   
    * Terminal command line on Mac/Linux 
-
+   
    **OR**
-
+   
    * The `cmd` (command) prompt on Windows
-
-   ```bash
-   vagrant box add centos/7 --provider virtualbox
-   vagrant plugin install vagrant-vbguest
-   ```
+     ```bash
+     vagrant box add centos/7 --provider virtualbox
+     vagrant plugin install vagrant-vbguest
+     ```
 
 
 ---
 
-
+<br />
 
 5. Puppet Master Tarball File:
 
 Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest "Puppet Master Downloads") and extract it into the same directory as this project.
 
 
-
+<br />
 
 ---
 
-
-
+<br />
 
 ## Usage ##
 
-
+<br />
 
 ### Vagrant ###
 
+<br />
+
 Below will show you basic commands on how to use vagrant to orchestrate the lab/demo content.
 
-* *Note on Vagrant: You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)*
+*Note on Vagrant: You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)*
 
-
-
+<br />
 
   * To check the status of your vagrant / virtualbox environment:
     ```bash
     vagrant status
     ```
 
-
+<br />
 
   * To create or "bring up" a Puppet Master server:
     ```bash
     vagrant up puppetmaster
     ```
 
+<br />
 
+  * To create or "bring up" any of the Puppet Agent server(s):
+    * *_Note_: The # sign is replaced with numeric values 1-9*
+    ```bash
+    vagrant up puppetagent#
+    ```
 
-To create or "bring up" any of the Puppet Agent server(s):
-```vagrant up puppetagent#```
+    * Example:
+      ```
+      vagrant up puppetagent1
+      ```
 
-Where the # sign is replaced with 1-9
- 
-Example:
-```vagrant up puppetagent1```
+<br />
 
+  * To destroy or delete a virtualbox machine using vagrant:
+    * *_Note_: "\<name of server\>" should be replaced by the machine you wish to destroy*
+    ```bash
+    vagrant destroy -f \<name of server\>
+    ```
 
+   * **_Caution_:Omitting the name of a server will destroy ALL virtual machines associated with this Vagrant file**
 
-To destroy or delete a virtualbox machine using vagrant:
-```vagrant destroy -f \<name of server\>```
+   * Example:
+     ```bash
+     vagrant destroy -f puppetmaster
+     ```
 
- Where "\<name of server\>" should be replaced by the machine you wish to destroy
+<br />
 
- Otherwise, omitting the name of the server will destroy ALL virtual machines associated with this Vagrant file
+  * To access the vagrant machine:
+    ```
+    vagrant ssh \<name of the server\>
+    ```
 
- Example:
-```vagrant destroy -f puppetmaster```
-
-
-
-
-To access the vagrant machine:
-```vagrant ssh \<name of the server\>```
- Example:
-```vagrant ssh puppetmaster```
+    * Example:
+      ```bash
+      vagrant ssh puppetmaster
+      ```
 
 
