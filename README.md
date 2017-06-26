@@ -8,7 +8,7 @@ This repository contains "most" of the  puppet training content. Some pre-requis
 
 1. Vagrant Installation:
 
-[Download and install Vagrant for your specific operating system](https://www.vagrantup.com/downloads.html "Vagrant Downloads")
+   [Download and install Vagrant](https://www.vagrantup.com/downloads.html "Vagrant Downloads") for your specific operating system.
 
 
 ---
@@ -18,8 +18,9 @@ This repository contains "most" of the  puppet training content. Some pre-requis
 
    [Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
 
+   <br />
 
-   Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack" from the above link as well.
+   Alternatively, you may want to download / install "**VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack**" from the above link as well.
 
 
 ---
@@ -62,7 +63,7 @@ This repository contains "most" of the  puppet training content. Some pre-requis
 
 5. Puppet Master Tarball File:
 
-Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest "Puppet Master Downloads") and extract it into the same directory as this project.
+   Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest "Puppet Master Downloads") and extract it into the same directory as this project.
 
 
 <br />
@@ -76,8 +77,6 @@ Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download
 <br />
 
 ### Vagrant ###
-
-<br />
 
 Below will show you basic commands on how to use vagrant to orchestrate the lab/demo content.
 
@@ -140,5 +139,18 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
       ```bash
       vagrant ssh puppetmaster
       ```
+
+<br />
+
+### Puppet ###
+
+This section will show you basic Puppet commands:
+
+* Connect to the puppet master, compile catalog, and enforce catalog on the node: **(all nodes)**
+  ```bash
+  puppet agent -t
+  or
+  puppet agent --test
+  ```
 
 
