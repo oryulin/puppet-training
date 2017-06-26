@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+pe_folder_location="/vagrant/puppet-enterprise-2017.2.1-el-7-x86_64"
+
 #https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=ubuntu&rel=16.04&arch=amd64&ver=latest
 
 #Ubuntu 16.04
@@ -58,9 +60,8 @@ sudo cat >> /etc/hosts <<EOL
 EOL
 
 
-#sudo /vagrant/puppet-enterprise-2016.4.2-ubuntu-14.04-amd64/puppet-enterprise-installer -c /vagrant/pe.conf
 echo -e "#-----------------------------------------------------------\n# Installing: Puppet Server \n#-----------------------------------------------------------"
-sudo -i /vagrant/puppet-enterprise-2017.2.1-el-7-x86_64/puppet-enterprise-installer -c /vagrant/pe.conf
+sudo -i $pe_folder_location/puppet-enterprise-installer -c /vagrant/pe.conf
 
 
 echo -e "#-----------------------------------------------------------\n# Running Agent Test \n#-----------------------------------------------------------"
@@ -76,13 +77,12 @@ echo -e "#-----------------------------------------------------------\n# Install
 #sudo su - root -c "cd /etc/puppetlabs/code/environments/production/ && r10k puppetfile install"
 
 # Installing the modules locally from tar ball files from previous module installations:
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/concat.tar.gz --ignore-dependencies --force
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/stdlib.tar.gz --ignore-dependencies --force
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/npt.tar.gz --ignore-dependencies --force
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/sudo.tar.gz --ignore-dependencies --force
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/ssh.tar.gz --ignore-dependencies --force
-sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/apache.tar.gz --ignore-dependencies --force
+tarFiles="concat stdlib ntp sudo ssh apache"
 
+for module in $tarFiles
+do
+  sudo -i puppet module install /vagrant/learnpuppet/puppetFiles/$module.tar.gz --ignore-dependencies --force
+done
 
 # Place manifests into production:
 sudo -i cat > /etc/puppetlabs/code/environments/production/manifests/site.pp << 'EOL'
