@@ -1,0 +1,6 @@
+mod 'puppetlabs-apache', '1.11.0'
+mod 'puppetlabs-ntp', '6.2.0'
+mod 'puppetlabs-stdlib', '4.17.0'
+mod 'saz-sudo', '4.1.0'
+mod 'puppetlabs-concat', '4.0.0'
+mod 'ghoneycutt-ssh', '3.52.0'
