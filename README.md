@@ -16,11 +16,10 @@ This repository contains "most" of the  puppet training content. Some pre-requis
   
 2. VirtualBox Installation: 
 
-[Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
+   [Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
 
 
-
-Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack" from the above link as well.
+   Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack" from the above link as well.
 
 
 ---
@@ -35,52 +34,69 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
       * Hit the Windows button
       * Type in `cmd` and hit enter (this will open the command prompt)
       * Type the following command in the cmd window: 
-      ```bash
-      set PATH=%PATH%;C:\Program Files\Git\usr\bin
-      ```
+        ```bash
+        set PATH=%PATH%;C:\Program Files\Git\usr\bin
+        ```
 
 ---
 
  
 4. Vagrant Box and Plugin:
 
-Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
+   Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
 
-* Terminal command line on Mac/Linux 
+   * Terminal command line on Mac/Linux 
 
-**OR**
+   **OR**
 
-* The `cmd` (command) prompt on Windows
+   * The `cmd` (command) prompt on Windows
 
-```
-vagrant box add centos/7 --provider virtualbox
-vagrant plugin install vagrant-vbguest
-```
+   ```bash
+   vagrant box add centos/7 --provider virtualbox
+   vagrant plugin install vagrant-vbguest
+   ```
 
 
 ---
 
 
 
-3. Puppet Master Tarball File:
+5. Puppet Master Tarball File:
+
 Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest "Puppet Master Downloads") and extract it into the same directory as this project.
 
 
 
 
-
-## Usage
-* Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
+---
 
 
 
-To check the status of your vagrant / virtualbox environment:
-```vagrant status```
+
+## Usage ##
 
 
 
-To create or "bring up" a Puppet Master server:
-```vagrant up puppetmaster```
+### Vagrant ###
+
+Below will show you basic commands on how to use vagrant to orchestrate the lab/demo content.
+
+* *Note on Vagrant: You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)*
+
+
+
+
+  * To check the status of your vagrant / virtualbox environment:
+    ```bash
+    vagrant status
+    ```
+
+
+
+  * To create or "bring up" a Puppet Master server:
+    ```bash
+    vagrant up puppetmaster
+    ```
 
 
 
