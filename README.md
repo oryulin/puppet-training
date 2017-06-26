@@ -14,7 +14,7 @@ This repository contains "most" of the  puppet training content. Some pre-requis
 ---
 
   
-1. VirtualBox Installation: 
+2. VirtualBox Installation: 
 
 [Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
 
@@ -26,7 +26,7 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
 ---
 
 
-1. SSH client: 
+3. SSH client: 
  * Linux should have an ssh client available native to the OS. No download should be necessary.
  * Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
   * During installation, you must specify one specific option:
@@ -85,7 +85,7 @@ To create or "bring up" a Puppet Master server:
 
 
 To create or "bring up" any of the Puppet Agent server(s):
-```vagrant up puppetagent<font color="red">#</font>```
+```vagrant up puppetagent#```
 
 Where the # sign is replaced with 1-9
  
@@ -95,9 +95,9 @@ Example:
 
 
 To destroy or delete a virtualbox machine using vagrant:
-```vagrant destroy -f <name of server>```
+```vagrant destroy -f \<name of server\>```
 
- Where "<name of server>" should be replaced by the machine you wish to destroy
+ Where "\<name of server\>" should be replaced by the machine you wish to destroy
 
  Otherwise, omitting the name of the server will destroy ALL virtual machines associated with this Vagrant file
 
@@ -108,7 +108,7 @@ To destroy or delete a virtualbox machine using vagrant:
 
 
 To access the vagrant machine:
-```vagrant ssh <name of the server>```
+```vagrant ssh \<name of the server\>```
  Example:
 ```vagrant ssh puppetmaster```
 
