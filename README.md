@@ -156,6 +156,9 @@ This section will show you basic Puppet commands. **All puppet commands should b
   ```
 
 <br />
+
+---
+
 <br />
 
 * Apply a single manifest **(.pp file)** on a node: **(all nodes)**
@@ -164,7 +167,12 @@ This section will show you basic Puppet commands. **All puppet commands should b
   ```
 
 <br />
+
+---
+
 <br />
+
+**Puppet Locations**:
 
 * Location of the Puppet code directory: **(Puppet Master only)**
   ```bash
@@ -207,12 +215,51 @@ This section will show you basic Puppet commands. **All puppet commands should b
   /etc/puppetlabs/code/modules/<MODULE>/manifests/init.pp
   ```
 
-<br />
+* Agent Run Log Files: **(all nodes)**
+  ```bash
+  # Depending on the OS:
+  
+  cat /var/log/messages 
+  
+  # or
+  
+  cat /var/log/system.log
+  ```
+
 <br />
 
-
+---
 
 <br />
+
+**Puppet Certificate Signing (CLI)**
+
+* Commands handle certificates: **(Puppet Master only)**
+  ```bash
+  # Lists all pending certificate requests. 
+  # Also, if this command is used with the option "-a", it will list ALL certificates, signed and unsigned, not just pending certs.
+  puppet cert list
+  
+  # Signs a certificate for a single host:
+  # Replace <hostname> with the name of the host you wish to sign.
+  puppet cert sign <hostname>
+  
+  # Rejects a certificate for a single host:
+  # Replace <hostname> with the name of the host you wish to revoke.
+  puppet revoke <hostname> - rejects request of specified cert
+  
+  # Signs all pending certificates. Use caution when using this command in production environments.
+  puppet cert sign --all - signs all certs
+  ```
+
+<br />
+
+*_Note_: Remember to run a `puppet agent -t` on the node you sign after the certificate is signed to ensure the catalog is applied.*
+
+<br />
+
+---
+
 <br />
 
 
