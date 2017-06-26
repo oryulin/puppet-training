@@ -1,20 +1,23 @@
-#AMEX - Training/Lab Files:
+# AMEX - Training/Lab Files:
 This repository contains "most" of the  puppet training content. Some pre-requisites will still be needed and can be added by following the instructions in the [Prerequisites] section.
 
 ---
 
-#Prerequisites
+## Prerequisites
 
 
 1. Vagrant Installation:
+
 [Download and install Vagrant for your specific operating system](https://www.vagrantup.com/downloads.html "Vagrant Downloads")
 
 
 ---
 
   
-2. VirtualBox Installation: 
+1. VirtualBox Installation: 
+
 [Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
+
 
 
 Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack" from the above link as well.
@@ -23,35 +26,27 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
 ---
 
 
-3. SSH client: 
-..* Linux should have an ssh client available native to the OS. No download should be necessary.
+1. SSH client: 
+ * Linux should have an ssh client available native to the OS. No download should be necessary.
+ * Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
+  * During installation, you must specify one specific option:
+   * `Use Git and optional Unix tools from the Windows Command Prompt`
+  * After it is installed, do the following:
+  * Hit the Windows button
+  * Type in cmd and hit enter (this will open the command prompt)
+  * Type the following command in the cmd window: set PATH=%PATH%;C:\Program Files\Git\usr\bin
 
 
-..* Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
-
-
-..*..* During installation, you must specify one specific option:
-
-
-..*..*..* "Use Git and optional Unix tools from the Windows Command Prompt" 
-
-  
-  After it is installed, do the following:
-
-  # Hit the Windows button
-
-  # Type in cmd and hit enter (this will open the command prompt)
-
-  # Type the following command in the cmd window: set PATH=%PATH%;C:\Program Files\Git\usr\bin
+---
 
  
 Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
 
-..* Terminal command line on Mac/Linux 
+* Terminal command line on Mac/Linux 
 
 **OR**
 
-..* The cmd (command) prompt on Windows
+* The `cmd` (command) prompt on Windows
 
 ```bash
 vagrant box add centos/7 --provider virtualbox
@@ -72,12 +67,10 @@ Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download
 
 
 
-#Usage
+## Usage
 
 
-Vagrant - You can look up basic commands on how to use Vagrant here:
-
-https://www.vagrantup.com/docs/cli/
+Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
 
 
 
@@ -85,8 +78,10 @@ To check the status of your vagrant / virtualbox environment:
 ```vagrant status```
 
 
+
 To create or "bring up" a Puppet Master server:
 ```vagrant up puppetmaster```
+
 
 
 To create or "bring up" any of the Puppet Agent server(s):
@@ -108,6 +103,7 @@ To destroy or delete a virtualbox machine using vagrant:
 
  Example:
 ```vagrant destroy -f puppetmaster```
+
 
 
 
