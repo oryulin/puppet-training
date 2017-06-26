@@ -29,17 +29,20 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
 3. SSH client: 
  * Linux should have an ssh client available native to the OS. No download should be necessary.
  * Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
-  * During installation, you must specify one specific option:
-   * `Use Git and optional Unix tools from the Windows Command Prompt`
-  * After it is installed, do the following:
-  * Hit the Windows button
-  * Type in cmd and hit enter (this will open the command prompt)
-  * Type the following command in the cmd window: set PATH=%PATH%;C:\Program Files\Git\usr\bin
+    During installation, you must specify one specific option:
+      `Use Git and optional Unix tools from the Windows Command Prompt`
+    After it is installed, do the following:
+      Hit the Windows button
+      Type in `cmd` and hit enter (this will open the command prompt)
+      Type the following command in the cmd window: 
+        ```set PATH=%PATH%;C:\Program Files\Git\usr\bin```
 
 
 ---
 
  
+4. Vagrant Box and Plugin:
+
 Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
 
 * Terminal command line on Mac/Linux 
@@ -48,7 +51,7 @@ Install the "box" (operating system image used by Vagrant) and the plugin for sh
 
 * The `cmd` (command) prompt on Windows
 
-```bash
+```
 vagrant box add centos/7 --provider virtualbox
 vagrant plugin install vagrant-vbguest
 ```
@@ -63,14 +66,12 @@ Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download
 
 
 
----
-
 
 
 ## Usage
 
 
-Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
+1. Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
 
 
 
