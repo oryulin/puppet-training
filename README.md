@@ -1,27 +1,28 @@
 #AMEX - Training/Lab Files:
 This repository contains "most" of the  puppet training content. Some pre-requisites will still be needed and can be added by following the instructions in the [Prerequisites] section.
 
+---
+
 #Prerequisites
 
 1. Vagrant Installation:
-https://www.vagrantup.com/downloads.html
+[Download and install Vagrant for your specific operating system](https://www.vagrantup.com/downloads.html "Vagrant Downloads")
 
+---
   
 2. VirtualBox Installation: 
-https://www.virtualbox.org/wiki/Downloads
+[Download and install virtualbox for your specific operating system](https://www.virtualbox.org/wiki/Downloads "VirtualBox Downloads")
 
+Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack" from the above link as well.
 
-2.a VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack
-https://www.virtualbox.org/wiki/Downloads
+---
 
-SSH client: 
-- Linux should have an ssh client available native to the OS. No download should be necessary.
+3. SSH client: 
+..* Linux should have an ssh client available native to the OS. No download should be necessary.
 
-- Windows: Download Git client for Windows - 
-  https://git-scm.com/download/win 
-
-  During installation, you must specify one specific option:
-  -  "Use Git and optional Unix tools from the Windows Command Prompt" 
+..* Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
+..*..* During installation, you must specify one specific option:
+..*..*..* "Use Git and optional Unix tools from the Windows Command Prompt" 
   
   After it is installed, do the following:
   # Hit the Windows button
@@ -29,12 +30,14 @@ SSH client:
   # Type the following command in the cmd window: set PATH=%PATH%;C:\Program Files\Git\usr\bin
  
 Install the "box" (operating system image used by Vagrant) and the plugin for sharing folders by using the following command in the: 
-- Terminal command line on Mac/Linux 
-OR 
-- The cmd (command) prompt on Windows:
+..* Terminal command line on Mac/Linux 
+**OR**
+..* The cmd (command) prompt on Windows
 
+```bash
 vagrant box add centos/7 --provider virtualbox
 vagrant plugin install vagrant-vbguest
+```
 
 3. Puppet Master Tarball File:
 https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest
