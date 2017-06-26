@@ -91,12 +91,14 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
     ```
 
 <br />
+<br />
 
   * To create or "bring up" a Puppet Master server:
     ```bash
     vagrant up puppetmaster
     ```
 
+<br />
 <br />
 
   * To create or "bring up" any of the Puppet Agent server(s):
@@ -111,11 +113,12 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
       ```
 
 <br />
+<br />
 
   * To destroy or delete a virtualbox machine using vagrant:
-    * *_Note_: "\<name of server\>" should be replaced by the machine you wish to destroy*
+    * * _Note_: "\<name of server\>" should be replaced by the machine you wish to destroy*
     ```bash
-    vagrant destroy -f \<name of server\>
+    vagrant destroy -f <name of server>
     ```
 
    * **_Caution_:Omitting the name of a server will destroy ALL virtual machines associated with this Vagrant file**
@@ -126,10 +129,11 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
      ```
 
 <br />
+<br />
 
   * To access the vagrant machine:
     ```
-    vagrant ssh \<name of the server\>
+    vagrant ssh <name of the server>
     ```
 
     * Example:
