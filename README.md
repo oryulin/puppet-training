@@ -144,7 +144,9 @@ Below will show you basic commands on how to use vagrant to orchestrate the lab/
 
 ### Puppet ###
 
-This section will show you basic Puppet commands:
+This section will show you basic Puppet commands. **All puppet commands should be ran as the user root**. This is not a best practice, but is done so to ease any complications when installing modules, editing users and so on while learning in the lab environment.
+
+<br />
 
 * Connect to the puppet master, compile catalog, and enforce catalog on the node: **(all nodes)**
   ```bash
@@ -180,9 +182,29 @@ This section will show you basic Puppet commands:
   ```
 
 * Location of the modules directory pertaining only to specific environments: **(Puppet Master only)**
-  * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. **(Default is production)**
+  * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
   ```bash
   cd /etc/puppetlabs/code/environments/<ENVIRONMENT>/modules/
+  ```
+
+* Location of the environment wide (site) manifest file: **(Puppet Master only)**
+  * Can specify **node definitions**, **classes**, **resource types** and much more at an environment level here.
+  * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
+  ```bash
+  /etc/puppetlabs/code/environments/<ENVIRONMENT>/manifests/site.pp
+  ```
+
+* Location of the primary/entrypoint module manifest file: **(Puppet Master only)**
+  * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
+  * Replace \<MODULE\> with the name of the module you wish to select.
+  ```bash
+  # Environment specific module:
+  /etc/puppetlabs/code/environments/<ENVIRONMENT>/modules/<MODULE>/manifests/init.pp
+  
+  # or
+  
+  # Modules pertaining to all servers:
+  /etc/puppetlabs/code/modules/<MODULE>/manifests/init.pp
   ```
 
 <br />
