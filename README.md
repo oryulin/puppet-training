@@ -1,9 +1,9 @@
-# AMEX - Training/Lab Files:
+# AMEX - Training/Lab Files: #
 This repository contains "most" of the  puppet training content. Some pre-requisites will still be needed and can be added by following the instructions in the [Prerequisites] section.
 
 ---
 
-## Prerequisites
+## Prerequisites ##
 
 
 1. Vagrant Installation:
@@ -29,20 +29,21 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
 3. SSH client: 
  * Linux should have an ssh client available native to the OS. No download should be necessary.
  * Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
+During installation, you must specify one specific option: 
 
-    During installation, you must specify one specific option:
+`Use Git and optional Unix tools from the Windows Command Prompt`
 
-      `Use Git and optional Unix tools from the Windows Command Prompt`
+After it is installed, do the following:
 
-    After it is installed, do the following:
+Hit the Windows button
 
-      Hit the Windows button
+Type in `cmd` and hit enter (this will open the command prompt)
 
-      Type in `cmd` and hit enter (this will open the command prompt)
+Type the following command in the cmd window: 
 
-      Type the following command in the cmd window: 
-
-        ```set PATH=%PATH%;C:\Program Files\Git\usr\bin```
+```bash
+set PATH=%PATH%;C:\Program Files\Git\usr\bin
+```
 
 ---
 
@@ -75,9 +76,7 @@ Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download
 
 
 ## Usage
-
-
-1. Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
+* Vagrant - You can look up basic commands on how to use Vagrant here: [Vagrant CLI Commands](https://www.vagrantup.com/docs/cli/)
 
 
 
