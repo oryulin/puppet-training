@@ -35,7 +35,7 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
       * Hit the Windows button
       * Type in `cmd` and hit enter (this will open the command prompt)
       * Type the following command in the cmd window: 
-```bash
+        * ```bash
 set PATH=%PATH%;C:\Program Files\Git\usr\bin
 ```
 
