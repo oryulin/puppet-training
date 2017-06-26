@@ -29,12 +29,19 @@ Alternatively, you may want to install "VirtualBox 5.1.22 Oracle VM VirtualBox E
 3. SSH client: 
  * Linux should have an ssh client available native to the OS. No download should be necessary.
  * Windows: Download the [Git client for Windows](https://git-scm.com/download/win)
+
     During installation, you must specify one specific option:
+
       `Use Git and optional Unix tools from the Windows Command Prompt`
+
     After it is installed, do the following:
+
       Hit the Windows button
+
       Type in `cmd` and hit enter (this will open the command prompt)
+
       Type the following command in the cmd window: 
+
         ```set PATH=%PATH%;C:\Program Files\Git\usr\bin```
 
 
