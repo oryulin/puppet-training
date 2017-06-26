@@ -183,15 +183,21 @@ This section will show you basic Puppet commands. **All puppet commands should b
   cd /etc/puppetlabs/code
   ```
 
+<br />
+
 * Location of the environments directory: **(Puppet Master only)**
   ```bash
   cd /etc/puppetlabs/code/environments
   ```
 
+<br />
+
 * Location of the modules directory pertaining to ALL servers, not environments: **(Puppet Master only)**
   ```bash
   cd /etc/puppetlabs/code/modules
   ```
+
+<br />
 
 * Location of the modules directory pertaining only to specific environments: **(Puppet Master only)**
   * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
@@ -199,12 +205,16 @@ This section will show you basic Puppet commands. **All puppet commands should b
   cd /etc/puppetlabs/code/environments/<ENVIRONMENT>/modules/
   ```
 
+<br />
+
 * Location of the environment wide (site) manifest file: **(Puppet Master only)**
   * Can specify **node definitions**, **classes**, **resource types** and much more at an environment level here.
   * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
   ```bash
   /etc/puppetlabs/code/environments/<ENVIRONMENT>/manifests/site.pp
   ```
+
+<br />
 
 * Location of the primary/entrypoint module manifest file: **(Puppet Master only)**
   * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. *(Default is production)*
@@ -218,6 +228,8 @@ This section will show you basic Puppet commands. **All puppet commands should b
   # Modules pertaining to all servers:
   /etc/puppetlabs/code/modules/<MODULE>/manifests/init.pp
   ```
+
+<br />
 
 * Agent Run Log Files: **(all nodes)**
   ```bash
