@@ -64,6 +64,10 @@ This repository contains "most" of the  puppet training content. Some pre-requis
 5. Puppet Master Tarball File:
 
    Download the [Puppet Master tar file](https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest "Puppet Master Downloads") and extract it into the same directory as this project.
+   
+   * The folder should be local to the directory of this project.
+     * If the folder is not local to this directory, please edit the bootstrap-puppetmaster.sh script and change the variable:
+       \$pe_folder_location
 
 
 <br />
