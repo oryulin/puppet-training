@@ -153,4 +153,54 @@ This section will show you basic Puppet commands:
   puppet agent --test
   ```
 
+<br />
+<br />
+
+* Apply a single manifest **(.pp file)** on a node: **(all nodes)**
+  ```bash
+  puppet apply /path/to/manifest/file.pp
+  ```
+
+<br />
+<br />
+
+* Location of the Puppet code directory: **(Puppet Master only)**
+  ```bash
+  cd /etc/puppetlabs/code
+  ```
+
+* Location of the environments directory: **(Puppet Master only)**
+  ```bash
+  cd /etc/puppetlabs/code/environments
+  ```
+
+* Location of the modules directory pertaining to ALL servers, not environments: **(Puppet Master only)**
+  ```bash
+  cd /etc/puppetlabs/code/modules
+  ```
+
+* Location of the modules directory pertaining only to specific environments: **(Puppet Master only)**
+  * Replace \<ENVIRONMENT\> with the name of the environment you wish to select. **(Default is production)**
+  ```bash
+  cd /etc/puppetlabs/code/environments/<ENVIRONMENT>/modules/
+  ```
+
+<br />
+<br />
+
+
+
+<br />
+<br />
+
+
+
+<br />
+<br />
+
+
+
+<br />
+<br />
+
 
